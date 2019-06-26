@@ -35,12 +35,15 @@ class Kitten(Animal):
         if 'type' in kwargs: del kwargs['type']
         super().__init__(**kwargs)
 
+    def kill(self, p):
+        print(f'{self.name()} will kill all {p}!!')
 
 def main():
     a0 = Kitten(name='fluffy', sound='meow')
     a1 = Duck(name='charlie', sound='quack')
     print(a0)
     print(a1)
+    a0.kill('humans')
 
 
 if __name__ == '__main__':
